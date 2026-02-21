@@ -4,19 +4,15 @@
   "tagline": "Come for the language, stay for the community!",
   "description": "Community driven group for promoting Python in Trivandrum, Kerala.",
   "stats": {
-    "meetups": "50+",
-    "members": "500+",
-    "talks": "100+"
+    "meetups": "10+",
+    "members": "100+",
+    "talks": "10+"
   },
   "links": {
     "telegram": "https://t.me/TrivandrumPython",
     "whatsapp": "https://chat.whatsapp.com/LvNo9tbhuVZ2sM3pvoUQpe",
     "github": "https://github.com/TrivandrumPython",
-    "codeOfConduct": "https://www.python.org/psf/codeofconduct/"
-  },
-  "announcement": {
-    "text": "Co-pilot Dev Days is coming soon!",
-    "link": "#events"
+    "codeOfConduct": "/coc/"
   },
   "monthlyMeetup": {
     "day": "TBA",

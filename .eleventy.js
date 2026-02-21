@@ -71,6 +71,16 @@ module.exports = function(eleventyConfig) {
     return new Date(dateObj) >= now;
   });
 
+  // Check if a date is within N days from now
+  eleventyConfig.addFilter("withinDays", (dateObj, days) => {
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+    const target = new Date(dateObj);
+    const limit = new Date(now);
+    limit.setDate(limit.getDate() + days);
+    return target >= now && target <= limit;
+  });
+
   // Limit filter
   eleventyConfig.addFilter("limit", (arr, count) => {
     return arr.slice(0, count);

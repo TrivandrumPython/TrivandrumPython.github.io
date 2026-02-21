@@ -1,0 +1,18 @@
+{% set nextEvent = false %}
+{% for event in collections.upcomingEvents %}
+  {% if not nextEvent and (event.data.date | withinDays(45)) %}
+    {% set nextEvent = event %}
+  {% endif %}
+{% endfor %}
+
+{% if nextEvent %}
+<div class="announcement-banner">
+  <div class="container">
+    <a href="{{ '/events/' | url }}{{ nextEvent.fileSlug }}/" class="announcement-banner__link">
+      <span class="announcement-banner__badge">Upcoming</span>
+      <span class="announcement-banner__text">{{ nextEvent.data.title }} — {{ nextEvent.data.date | shortDate }}</span>
+      <span class="announcement-banner__arrow">→</span>
+    </a>
+  </div>
+</div>
+{% endif %}
