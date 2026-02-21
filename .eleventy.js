@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
 
   // Create a collection for all events (sorted by date ascending)
   eleventyConfig.addCollection("events", function(collectionApi) {
@@ -79,6 +80,11 @@ module.exports = function(eleventyConfig) {
     const limit = new Date(now);
     limit.setDate(limit.getDate() + days);
     return target >= now && target <= limit;
+  });
+
+  // Machine-readable date for structured data and sitemap
+  eleventyConfig.addFilter("machineDate", (dateObj) => {
+    return new Date(dateObj).toISOString().split('T')[0];
   });
 
   // Limit filter

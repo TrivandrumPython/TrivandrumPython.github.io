@@ -8,12 +8,57 @@
   <title>{{ title }} — {{ site.name }}</title>
   <meta name="description" content="{{ title }} — {{ site.description }}">
 
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }} — {{ site.name }}">
+  <meta property="og:description" content="{{ title }} — {{ site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="event">
+  <meta property="og:image" content="{{ site.url }}/images/tripy-logo.jpg">
+  <meta property="og:site_name" content="{{ site.fullName }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }} — {{ site.name }}">
+  <meta name="twitter:description" content="{{ title }} — {{ site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/images/tripy-logo.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
   <link rel="icon" type="image/jpeg" href="{{ '/images/tripy-logo.jpg' | url }}">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "{{ title }}",
+    "description": "{{ title }} — {{ site.description }}",
+    "startDate": "{{ date | machineDate }}",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "{{ venue }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Trivandrum",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "{{ site.fullName }}",
+      "url": "{{ site.url }}"
+    }
+  }
+  </script>
 </head>
 <body>
   {% include "header.njk" %}

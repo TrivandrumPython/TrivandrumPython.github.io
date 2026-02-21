@@ -6,6 +6,23 @@
   <title>{{ title or site.name + " — " + site.fullName }}</title>
   <meta name="description" content="{{ description or site.description }}">
 
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title or site.name + ' — ' + site.fullName }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ site.url }}/images/tripy-logo.jpg">
+  <meta property="og:site_name" content="{{ site.fullName }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title or site.name + ' — ' + site.fullName }}">
+  <meta name="twitter:description" content="{{ description or site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/images/tripy-logo.jpg">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +33,22 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="{{ '/images/tripy-logo.jpg' | url }}">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ site.fullName }}",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/images/tripy-logo.jpg",
+    "description": "{{ site.description }}",
+    "sameAs": [
+      "{{ site.links.telegram }}",
+      "{{ site.links.github }}"
+    ]
+  }
+  </script>
 </head>
 <body>
   {% include "announcement.njk" %}
