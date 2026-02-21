@@ -1,0 +1,22 @@
+<section id="faq" class="section section--alt">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__label">// faq</span>
+      <h2 class="section__title">Questions?</h2>
+    </div>
+
+    <div class="faq-list">
+      {% for item in faq %}
+      <details class="faq-item">
+        <summary class="faq-item__question">
+          <span>{{ item.question }}</span>
+          <span class="faq-item__icon">+</span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>{{ item.answer }}</p>
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is TriPy?",
+    "answer": "TriPy is the Trivandrum Python Community - a volunteer-driven group of Python enthusiasts who organize monthly meetups, workshops, and project nights to promote Python programming in Thiruvananthapuram, Kerala."
+  },
+  {
+    "question": "Do I need to know Python to attend?",
+    "answer": "Not at all! We welcome everyone from complete beginners to experienced developers. Our meetups often include beginner-friendly talks and we have a supportive community ready to help you learn."
+  },
+  {
+    "question": "How can I give a talk at a meetup?",
+    "answer": "We'd love to have you speak! Reach out to us via Telegram or email at tripy@python.org with your talk idea. We welcome both full talks (20-30 min) and lightning talks (5-10 min) on any Python-related topic."
+  },
+  {
+    "question": "Is there a registration fee?",
+    "answer": "No! All TriPy events are completely free to attend. We believe in keeping our community accessible to everyone, regardless of their background or financial situation."
+  },
+  {
+    "question": "How can my company become a venue partner?",
+    "answer": "We're always looking for companies to host our meetups! Contact us at tripy@python.org. Venue partners get recognition at the event, on our website, and a chance to connect with talented Python developers in Trivandrum."
+  },
+  {
+    "question": "How do I stay updated about events?",
+    "answer": "Join our Telegram group (https://t.me/TrivandrumPython) or WhatsApp community for event announcements, discussions, and updates. You can also follow us on Twitter and check this website regularly."
+  }
+]

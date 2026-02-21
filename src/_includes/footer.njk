@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="{{ '/' | url }}" class="site-logo site-logo--footer">
+          <img src="{{ '/images/tripy-logo.jpg' | url }}" alt="TriPy — Trivandrum Python Community" class="site-logo__img">
+        </a>
+        <p class="footer__tagline">{{ site.tagline }}</p>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__heading">Navigate</h4>
+        <a href="{{ '/' | url }}#about">About</a>
+        <a href="{{ '/events/' | url }}">All Events</a>
+        <a href="{{ '/' | url }}#gallery">Gallery</a>
+        <a href="{{ '/' | url }}#faq">FAQ</a>
+        <a href="{{ site.links.codeOfConduct }}" target="_blank" rel="noopener">Code of Conduct</a>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__heading">Connect</h4>
+        <a href="{{ site.links.telegram }}" target="_blank" rel="noopener">Telegram</a>
+        <a href="{{ site.links.whatsapp }}" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2026 {{ site.fullName }}</p>
+    </div>
+  </div>
+</footer>

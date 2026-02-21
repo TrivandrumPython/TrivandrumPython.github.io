@@ -1,0 +1,43 @@
+[
+  {
+    "src": "/images/gallery/group-photo-1.jpg",
+    "alt": "TriPy large group photo with TriPy logo projected on screen",
+    "featured": true
+  },
+  {
+    "src": "/images/gallery/cake.jpg",
+    "alt": "TriPy 1 year celebration cake"
+  },
+  {
+    "src": "/images/gallery/chairs.jpg",
+    "alt": "Meetup venue seating arrangement"
+  },
+  {
+    "src": "/images/gallery/group-photo-2.jpg",
+    "alt": "TriPy community group photo"
+  },
+  {
+    "src": "/images/gallery/audience.jpg",
+    "alt": "Audience during a TriPy talk"
+  },
+  {
+    "src": "/images/gallery/selfie.jpg",
+    "alt": "Community members selfie"
+  },
+  {
+    "src": "/images/gallery/classroom.jpg",
+    "alt": "TriPy community group photo"
+  },
+  {
+    "src": "/images/gallery/glass-venue.jpg",
+    "alt": "TriPy community group photo"
+  },
+  {
+    "src": "/images/gallery/hackathon.jpg",
+    "alt": "TriPy community group photo"
+  },
+  {
+    "src": "/images/gallery/foss.jpg",
+    "alt": "TriPy community group photo"
+  }
+]

@@ -1,0 +1,24 @@
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="{{ '/' | url }}" class="site-logo">
+      <img src="{{ '/images/tripy-logo.jpg' | url }}" alt="TriPy — Trivandrum Python Community" class="site-logo__img">
+    </a>
+
+    <ul class="site-nav__links">
+      <li><a href="{{ '/' | url }}#about">About</a></li>
+      <li><a href="{{ '/events/' | url }}">Events</a></li>
+      <li><a href="{{ '/' | url }}#gallery">Gallery</a></li>
+      <li><a href="{{ '/' | url }}#faq">FAQ</a></li>
+      <li><a href="{{ site.links.codeOfConduct }}" target="_blank" rel="noopener">Code of Conduct</a></li>
+      <li>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle__icon">◐</span>
+        </button>
+      </li>
+    </ul>
+
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
+  </nav>
+</header>

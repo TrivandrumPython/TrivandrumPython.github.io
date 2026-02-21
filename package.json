@@ -1,0 +1,16 @@
+{
+  "name": "tripy-website",
+  "version": "1.0.0",
+  "description": "Trivandrum Python Community Website - Static Site built with 11ty",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "keywords": ["eleventy", "11ty", "python", "community"],
+  "author": "TriPy Community",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

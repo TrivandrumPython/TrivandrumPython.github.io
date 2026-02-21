@@ -1,0 +1,43 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <div class="hero__label">{{ site.description }}</div>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Come for the</span>
+          <span class="hero__title-accent">language</span><span class="hero__title-comma">,</span>
+          <span class="hero__title-line">stay for the</span>
+          <span class="hero__title-accent hero__title-accent--alt">community</span>
+        </h1>
+        <div class="hero__actions">
+          <a href="{{ site.links.telegram }}" class="btn btn--primary" target="_blank" rel="noopener">Join the community →</a>
+          <a href="{{ '/events/' | url }}" class="btn btn--outline">View events</a>
+        </div>
+      </div>
+
+      <div class="hero__banner">
+        <img src="{{ '/images/tripy-hero.png' | url }}" alt="TriPy — Trivandrum Python Community">
+      </div>
+    </div>
+
+    <div class="hero__stats">
+      <div class="stat">
+        <span class="stat__number">{{ site.stats.meetups }}</span>
+        <span class="stat__label">Meetups</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number">{{ site.stats.members }}</span>
+        <span class="stat__label">Members</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number">{{ site.stats.talks }}</span>
+        <span class="stat__label">Talks</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__decoration" aria-hidden="true">
+    <div class="hero__circle hero__circle--1"></div>
+    <div class="hero__circle hero__circle--2"></div>
+  </div>
+</section>

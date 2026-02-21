@@ -1,0 +1,95 @@
+---
+layout: base.njk
+title: All Events — TriPy
+permalink: events/index.html
+---
+
+<section class="section events-page-section">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__label">// all events</span>
+      <h2 class="section__title">Events</h2>
+      <p class="section__subtitle">Every meetup, workshop, and project night — past and upcoming.</p>
+    </div>
+
+    {% if collections.upcomingEvents.length > 0 %}
+    <div class="events-page__group">
+      <h3 class="events-page__group-title">Upcoming</h3>
+      <div class="events-list">
+        {% for event in collections.upcomingEvents %}
+        <a href="{{ '/events/' | url }}{{ event.fileSlug }}/" class="event-row">
+          <div class="event-row__date">
+            <span class="event-row__month">{{ event.data.date | monthDay }}</span>
+            <span class="event-row__day">{{ event.data.date | dayOfWeek }}</span>
+          </div>
+
+          <div class="event-row__info">
+            <div class="event-row__badges">
+              <span class="badge badge--{{ event.data.type }}">{{ event.data.type | replace("-", " ") }}</span>
+              {% if loop.first %}
+              <span class="badge badge--next">Next up</span>
+              {% endif %}
+            </div>
+            <h3 class="event-row__title">{{ event.data.title }}</h3>
+            <div class="event-row__meta">
+              <span>{{ event.data.time }}</span>
+              <span class="event-row__sep">·</span>
+              <span>{{ event.data.venue }}</span>
+            </div>
+            {% if event.data.talks and event.data.talks.length > 0 %}
+            <div class="event-row__talks">
+              {% for talk in event.data.talks %}
+              <span class="talk-pill">{{ talk.title }}{% if talk.speaker %} — {{ talk.speaker }}{% endif %}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+
+          <div class="event-row__arrow">→</div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if collections.pastEvents.length > 0 %}
+    <div class="events-page__group">
+      <h3 class="events-page__group-title">Past</h3>
+      <div class="events-list">
+        {% for event in collections.pastEvents %}
+        <a href="{{ '/events/' | url }}{{ event.fileSlug }}/" class="event-row event-row--past">
+          <div class="event-row__date">
+            <span class="event-row__month">{{ event.data.date | monthDay }}</span>
+            <span class="event-row__day">{{ event.data.date | year }}</span>
+          </div>
+
+          <div class="event-row__info">
+            <div class="event-row__badges">
+              <span class="badge badge--{{ event.data.type }}">{{ event.data.type | replace("-", " ") }}</span>
+              {% if event.data.attendees %}
+              <span class="badge badge--muted">{{ event.data.attendees }} attended</span>
+              {% endif %}
+            </div>
+            <h3 class="event-row__title">{{ event.data.title }}</h3>
+            <div class="event-row__meta">
+              <span>{{ event.data.date | readableDate }}</span>
+              <span class="event-row__sep">·</span>
+              <span>{{ event.data.venue }}</span>
+            </div>
+            {% if event.data.talks and event.data.talks.length > 0 %}
+            <div class="event-row__talks">
+              {% for talk in event.data.talks %}
+              <span class="talk-pill talk-pill--muted">{{ talk.title }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+
+          <div class="event-row__arrow">→</div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>

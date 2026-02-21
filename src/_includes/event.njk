@@ -1,0 +1,98 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — {{ site.name }}</title>
+  <meta name="description" content="{{ title }} — {{ site.description }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <link rel="icon" type="image/jpeg" href="{{ '/images/tripy-logo.jpg' | url }}">
+</head>
+<body>
+  {% include "header.njk" %}
+
+  <main>
+    <article class="event-page">
+      <div class="container">
+        <a href="{{ '/events/' | url }}" class="event-page__back">← All Events</a>
+
+        <header class="event-page__header">
+          <div class="event-page__badges">
+            <span class="badge badge--{{ type }}">{{ type | replace("-", " ") }}</span>
+            {% if date | isFuture %}
+            <span class="badge badge--next">Upcoming</span>
+            {% endif %}
+          </div>
+
+          <h1 class="event-page__title">{{ title }}</h1>
+
+          <div class="event-page__meta">
+            <div class="event-page__meta-item">
+              <strong>Date</strong>
+              <span>{{ date | readableDate }}</span>
+            </div>
+            <div class="event-page__meta-item">
+              <strong>Time</strong>
+              <span>{{ time }}</span>
+            </div>
+            <div class="event-page__meta-item">
+              <strong>Venue</strong>
+              <span>{{ venue }}</span>
+            </div>
+            {% if attendees %}
+            <div class="event-page__meta-item">
+              <strong>Attendees</strong>
+              <span>{{ attendees }}</span>
+            </div>
+            {% endif %}
+          </div>
+        </header>
+
+        {% if talks and talks.length > 0 %}
+        <section class="event-page__talks">
+          <h2>Talks</h2>
+          <div class="event-page__talk-list">
+            {% for talk in talks %}
+            <div class="event-page__talk">
+              <h3>{{ talk.title }}</h3>
+              {% if talk.speaker %}
+              <span class="event-page__speaker">by {{ talk.speaker }}</span>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+
+        <section class="event-page__body">
+          {{ content | safe }}
+        </section>
+
+        {% if tags and tags.length > 0 %}
+        <div class="event-page__tags">
+          {% for tag in tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if registration_url and (date | isFuture) %}
+        <div class="event-page__cta">
+          <a href="{{ registration_url }}" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Register for this event →</a>
+        </div>
+        {% endif %}
+      </div>
+    </article>
+  </main>
+
+  {% include "footer.njk" %}
+  <script src="{{ '/js/main.js' | url }}"></script>
+</body>
+</html>

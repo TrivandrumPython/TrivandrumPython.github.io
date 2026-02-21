@@ -1,0 +1,41 @@
+<section class="section section--alt">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__label">// archive</span>
+      <h2 class="section__title">Past Events</h2>
+      <p class="section__subtitle">A look back at our recent community gatherings.</p>
+    </div>
+
+    {% if collections.pastEvents.length > 0 %}
+    <div class="past-events-grid">
+      {% for event in collections.pastEvents | limit(4) %}
+      <a href="{{ '/events/' | url }}{{ event.fileSlug }}/" class="past-event-card">
+        <div class="past-event-card__header">
+          <span class="badge badge--{{ event.data.type }}">{{ event.data.type | replace("-", " ") }}</span>
+          {% if event.data.attendees %}
+          <span class="past-event-card__attendees">{{ event.data.attendees }} attended</span>
+          {% endif %}
+        </div>
+        <h3 class="past-event-card__title">{{ event.data.title }}</h3>
+        <div class="past-event-card__meta">
+          <span>{{ event.data.date | readableDate }}</span>
+          <span class="event-row__sep">·</span>
+          <span>{{ event.data.venue }}</span>
+        </div>
+        {% if event.data.talks and event.data.talks.length > 0 %}
+        <div class="past-event-card__talks">
+          {% for talk in event.data.talks %}
+          <span class="talk-pill talk-pill--muted">{{ talk.title }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="section__footer">
+      <a href="{{ '/events/' | url }}" class="btn btn--outline">View all events →</a>
+    </div>
+    {% endif %}
+  </div>
+</section>

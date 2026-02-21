@@ -1,0 +1,37 @@
+{
+  "name": "TriPy",
+  "fullName": "Trivandrum Python Community",
+  "tagline": "Come for the language, stay for the community!",
+  "description": "Community driven group for promoting Python in Trivandrum, Kerala.",
+  "stats": {
+    "meetups": "50+",
+    "members": "500+",
+    "talks": "100+"
+  },
+  "links": {
+    "telegram": "https://t.me/TrivandrumPython",
+    "whatsapp": "https://chat.whatsapp.com/LvNo9tbhuVZ2sM3pvoUQpe",
+    "github": "https://github.com/TrivandrumPython",
+    "codeOfConduct": "https://www.python.org/psf/codeofconduct/"
+  },
+  "announcement": {
+    "text": "Co-pilot Dev Days is coming soon!",
+    "link": "#events"
+  },
+  "monthlyMeetup": {
+    "day": "TBA",
+    "time": "6:00 PM - 7:45 PM",
+    "venue": "ICFOSS, Kazhakkoottam",
+    "venueDetail": "International Centre for Free and Open Source Software, Kariavattom",
+    "format": [
+      {
+        "time": "6:30 - 7:00 PM",
+        "activity": "Main Talk"
+      },
+      {
+        "time": "7:00 - 7:10 PM",
+        "activity": "Lightning Talk / Trends in Technology"
+      }
+    ]
+  }
+}

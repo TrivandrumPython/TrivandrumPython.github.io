@@ -1,0 +1,20 @@
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__label">// moments</span>
+      <h2 class="section__title">From Our Meetups</h2>
+      <p class="section__subtitle">Snapshots from our community gatherings — the talks, the workshops, and the conversations.</p>
+    </div>
+
+    <div class="gallery">
+      {% for image in gallery %}
+      <div class="gallery__item{% if image.featured %} gallery__item--featured{% endif %}">
+        <img src="{{ image.src | url }}" alt="{{ image.alt }}" loading="lazy">
+        <div class="gallery__overlay">
+          <span class="gallery__caption">{{ image.alt }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

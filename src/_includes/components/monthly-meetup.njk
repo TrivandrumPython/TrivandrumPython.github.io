@@ -1,0 +1,43 @@
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__label">// every month</span>
+      <h2 class="section__title">Monthly Python Meetup</h2>
+      <p class="section__subtitle">
+        Our flagship event. Every Wednesday evening, we gather to hear talks, share projects, and connect with fellow Python developers.
+      </p>
+    </div>
+
+    <div class="meetup-info">
+      <div class="meetup-info__cards">
+        <div class="meetup-detail">
+          <span class="meetup-detail__label">When</span>
+          <span class="meetup-detail__value">{{ site.monthlyMeetup.day }}</span>
+          <span class="meetup-detail__sub">{{ site.monthlyMeetup.time }}</span>
+        </div>
+        <div class="meetup-detail">
+          <span class="meetup-detail__label">Where</span>
+          <span class="meetup-detail__value">{{ site.monthlyMeetup.venue }}</span>
+          <span class="meetup-detail__sub">{{ site.monthlyMeetup.venueDetail }}</span>
+        </div>
+        <div class="meetup-detail">
+          <span class="meetup-detail__label">Cost</span>
+          <span class="meetup-detail__value">Free</span>
+          <span class="meetup-detail__sub">Open to all levels</span>
+        </div>
+      </div>
+
+      <div class="meetup-format">
+        <h3 class="meetup-format__title">Format</h3>
+        <div class="meetup-timeline">
+          {% for item in site.monthlyMeetup.format %}
+          <div class="meetup-timeline__item">
+            <code class="meetup-timeline__time">{{ item.time }}</code>
+            <span class="meetup-timeline__activity">{{ item.activity }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

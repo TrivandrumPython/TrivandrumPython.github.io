@@ -1,0 +1,55 @@
+<section id="events" class="section section--alt">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__label">// upcoming</span>
+      <h2 class="section__title">Next Events</h2>
+      <p class="section__subtitle">Auto-populated from upcoming dates. All are welcome — no prior experience required.</p>
+    </div>
+
+    {% if collections.upcomingEvents.length > 0 %}
+    <div class="events-list">
+      {% for event in collections.upcomingEvents %}
+      <a href="{{ '/events/' | url }}{{ event.fileSlug }}/" class="event-row">
+        <div class="event-row__date">
+          <span class="event-row__month">{{ event.data.date | monthDay }}</span>
+          <span class="event-row__day">{{ event.data.date | dayOfWeek }}</span>
+        </div>
+
+        <div class="event-row__info">
+          <div class="event-row__badges">
+            <span class="badge badge--{{ event.data.type }}">{{ event.data.type | replace("-", " ") }}</span>
+            {% if loop.first %}
+            <span class="badge badge--next">Next up</span>
+            {% endif %}
+          </div>
+          <h3 class="event-row__title">{{ event.data.title }}</h3>
+          <div class="event-row__meta">
+            <span>{{ event.data.time }}</span>
+            <span class="event-row__sep">·</span>
+            <span>{{ event.data.venue }}</span>
+          </div>
+          {% if event.data.talks and event.data.talks.length > 0 %}
+          <div class="event-row__talks">
+            {% for talk in event.data.talks %}
+            <span class="talk-pill">{{ talk.title }}{% if talk.speaker %} — {{ talk.speaker }}{% endif %}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="event-row__arrow">→</div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+      <p>No upcoming events right now. Stay tuned!</p>
+      <a href="{{ site.links.telegram }}" class="btn btn--outline" target="_blank" rel="noopener">Join Telegram for updates</a>
+    </div>
+    {% endif %}
+
+    <div class="section__footer">
+      <a href="{{ '/events/' | url }}" class="btn btn--outline">View all events →</a>
+    </div>
+  </div>
+</section>
