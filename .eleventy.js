@@ -77,7 +77,7 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
-    pathPrefix: process.env.GITHUB_ACTIONS ? "/tripy-website/" : "/",
+    pathPrefix: "/",
     dir: {
       input: "src",
       output: "_site",
