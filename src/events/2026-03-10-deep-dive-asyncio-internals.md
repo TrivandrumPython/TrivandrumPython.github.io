@@ -1,7 +1,7 @@
 ---
 title: "Deep Dive Python - Asyncio Internals"
 date: 2026-03-10
-time: "09:00 AM - 09:30 PM"
+time: "09:00 PM - 09:30 PM"
 venue: "Online"
 type: online session
 attendees: null
