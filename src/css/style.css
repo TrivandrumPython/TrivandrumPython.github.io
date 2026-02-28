@@ -548,6 +548,10 @@ a {
 .section__footer {
   margin-top: 3rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 /* =========================================
@@ -1444,6 +1448,30 @@ a {
   border-top: 1px solid var(--border);
   font-size: 0.8rem;
   color: var(--text-3);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.footer__socials a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .footer__made {
