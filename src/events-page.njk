@@ -48,6 +48,12 @@ permalink: events/index.html
             {% endif %}
           </div>
 
+          {% if event.data.image %}
+          <div class="event-row__thumb">
+            <img src="{{ ('/' + event.data.image) | url }}" alt="{{ event.data.title }}" loading="lazy">
+          </div>
+          {% endif %}
+
           <div class="event-row__arrow">→</div>
         </a>
         {% endfor %}
@@ -87,6 +93,12 @@ permalink: events/index.html
             </div>
             {% endif %}
           </div>
+
+          {% if event.data.image %}
+          <div class="event-row__thumb">
+            <img src="{{ ('/' + event.data.image) | url }}" alt="{{ event.data.title }}" loading="lazy">
+          </div>
+          {% endif %}
 
           <div class="event-row__arrow">→</div>
         </a>
