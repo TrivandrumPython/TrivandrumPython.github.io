@@ -1,43 +1,100 @@
 [
   {
-    "src": "/images/gallery/group-photo-1.jpg",
-    "alt": "TriPy large group photo with TriPy logo projected on screen",
+    "src": "/images/gallery/gallery-02.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-03.jpg",
+    "alt": "TriPy community meetup photo",
     "featured": true
   },
   {
-    "src": "/images/gallery/cake.jpg",
-    "alt": "TriPy 1 year celebration cake"
+    "src": "/images/gallery/gallery-04.jpg",
+    "alt": "TriPy community meetup photo"
   },
   {
-    "src": "/images/gallery/chairs.jpg",
-    "alt": "Meetup venue seating arrangement"
+    "src": "/images/gallery/gallery-05.jpg",
+    "alt": "TriPy community meetup photo"
   },
   {
-    "src": "/images/gallery/group-photo-2.jpg",
-    "alt": "TriPy community group photo"
+    "src": "/images/gallery/gallery-07.jpg",
+    "alt": "TriPy community meetup photo"
   },
   {
-    "src": "/images/gallery/audience.jpg",
-    "alt": "Audience during a TriPy talk"
+    "src": "/images/gallery/gallery-01.jpg",
+    "alt": "TriPy community meetup photo"
   },
   {
-    "src": "/images/gallery/selfie.jpg",
-    "alt": "Community members selfie"
+    "src": "/images/gallery/gallery-21.jpg",
+    "alt": "TriPy community meetup photo"
   },
   {
-    "src": "/images/gallery/classroom.jpg",
-    "alt": "TriPy community group photo"
+    "src": "/images/gallery/gallery-08.jpg",
+    "alt": "TriPy community meetup photo"
   },
   {
-    "src": "/images/gallery/glass-venue.jpg",
-    "alt": "TriPy community group photo"
+    "src": "/images/gallery/gallery-09.jpg",
+    "alt": "TriPy community meetup photo"
   },
   {
-    "src": "/images/gallery/hackathon.jpg",
-    "alt": "TriPy community group photo"
+    "src": "/images/gallery/gallery-10.jpg",
+    "alt": "TriPy community meetup photo"
   },
   {
-    "src": "/images/gallery/foss.jpg",
-    "alt": "TriPy community group photo"
+    "src": "/images/gallery/gallery-11.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-12.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-13.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-14.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-24.jpg",
+    "alt": "TriPy community meetup photo",
+    "featured": true
+  },
+  {
+    "src": "/images/gallery/gallery-15.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-16.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-17.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-18.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-19.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-20.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-06.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-22.jpg",
+    "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/gallery/gallery-23.jpg",
+    "alt": "TriPy community meetup photo"
   }
 ]

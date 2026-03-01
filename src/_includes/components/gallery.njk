@@ -8,13 +8,20 @@
 
     <div class="gallery">
       {% for image in gallery %}
-      <div class="gallery__item{% if image.featured %} gallery__item--featured{% endif %}">
+      <div class="gallery__item{% if image.featured %} gallery__item--featured{% endif %}" data-index="{{ loop.index0 }}">
         <img src="{{ image.src | url }}" alt="{{ image.alt }}" loading="lazy">
-        <div class="gallery__overlay">
-          <span class="gallery__caption">{{ image.alt }}</span>
-        </div>
       </div>
       {% endfor %}
     </div>
+  </div>
+
+  <div class="lightbox" id="galleryLightbox">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" aria-label="Previous">&#8249;</button>
+    <button class="lightbox__next" aria-label="Next">&#8250;</button>
+    <div class="lightbox__content">
+      <img class="lightbox__img" src="" alt="TriPy community meetup photo">
+    </div>
+    <div class="lightbox__counter"></div>
   </div>
 </section>
