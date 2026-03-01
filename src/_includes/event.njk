@@ -103,6 +103,12 @@
           </div>
         </header>
 
+        {% if image %}
+        <div class="event-page__image">
+          <img src="{{ ('/' + image) | url }}" alt="{{ title }}" loading="lazy">
+        </div>
+        {% endif %}
+
         {% if talks and talks.length > 0 %}
         <section class="event-page__talks">
           <h2>Talks</h2>

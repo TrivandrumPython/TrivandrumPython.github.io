@@ -11,18 +11,18 @@
   --py-yellow-dim: #D4A80E;
 
   /* Dark theme (default) */
-  --bg-0: #0a0a0f;
-  --bg-1: #111118;
-  --bg-2: #1a1a24;
-  --bg-3: #22222f;
+  --bg-0: #16161e;
+  --bg-1: #1e1e28;
+  --bg-2: #272733;
+  --bg-3: #31313f;
 
   --text-0: #f0f0f5;
   --text-1: #c8c8d4;
-  --text-2: #8888a0;
-  --text-3: #55556a;
+  --text-2: #9494a8;
+  --text-3: #6a6a80;
 
-  --border: #2a2a3a;
-  --border-hover: #3a3a50;
+  --border: #363648;
+  --border-hover: #46465c;
 
   --accent: var(--py-yellow);
   --accent-alt: var(--py-blue);
@@ -766,6 +766,21 @@ a {
   margin-top: 0.75rem;
 }
 
+.event-row__thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.event-row__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .event-row__arrow {
   font-family: var(--font-mono);
   font-size: 1.2rem;
@@ -783,6 +798,11 @@ a {
 @media (max-width: 600px) {
   .event-row__date {
     min-width: 55px;
+  }
+
+  .event-row__thumb {
+    width: 56px;
+    height: 56px;
   }
 
   .event-row__arrow {
@@ -1359,6 +1379,19 @@ a {
 .event-page__meta-item span {
   font-size: 0.95rem;
   color: var(--text-1);
+}
+
+.event-page__image {
+  margin-bottom: 2.5rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  max-width: 480px;
+}
+
+.event-page__image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .event-page__talks {
