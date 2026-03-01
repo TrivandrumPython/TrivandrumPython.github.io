@@ -2,7 +2,7 @@
 title: "TriPy Meetup, Sept '25"
 date: 2025-09-13
 time: "6:00 PM - 7:45 PM"
-venue: "UST Global, Technopark"
+venue: "ICFOSS, Greenfield Stadium, Karyvattom"
 type: meetup
 attendees: 45
 talks:

@@ -2,7 +2,7 @@
 title: "TriPy Meetup, Jan '26"
 date: 2026-01-11
 time: "6:00 PM - 7:45 PM"
-venue: "IBS Software, Technopark"
+venue: "ICFOSS, Greenfield Stadium, Karyvattom"
 type: meetup
 attendees: 38
 talks:

@@ -2,7 +2,7 @@
 title: "TriPy Meetup, July '25"
 date: 2025-07-12
 time: "6:00 PM - 7:45 PM"
-venue: "Kerala Startup Mission"
+venue: "ICFOSS, Greenfield Stadium, Karyvattom"
 type: meetup
 attendees: 35
 talks:

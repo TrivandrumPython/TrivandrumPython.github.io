@@ -2,7 +2,7 @@
 title: "TriPy Meetup, Nov '25"
 date: 2025-11-08
 time: "6:00 PM - 7:45 PM"
-venue: "QBurst, Technopark"
+venue: "ICFOSS, Greenfield Stadium, Karyvattom"
 type: meetup
 attendees: 42
 talks:
