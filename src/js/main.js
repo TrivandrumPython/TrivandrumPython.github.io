@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Upcoming Event Banner ---
+  const banners = document.querySelectorAll('.announcement-banner[data-event-date]');
+  if (banners.length) {
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+    const limit = new Date(now);
+    limit.setDate(limit.getDate() + 45);
+
+    let shown = false;
+    for (const banner of banners) {
+      const eventDate = new Date(banner.dataset.eventDate + 'T00:00:00');
+      if (!shown && eventDate >= now && eventDate <= limit) {
+        banner.style.display = '';
+        shown = true;
+      }
+    }
+  }
   // --- Mobile Menu ---
   const menuBtn = document.querySelector('.mobile-menu-btn');
   const navLinks = document.querySelector('.site-nav__links');
