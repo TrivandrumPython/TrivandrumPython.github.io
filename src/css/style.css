@@ -1513,7 +1513,7 @@ a {
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -1645,6 +1645,76 @@ a {
   border-top: 1px solid var(--border);
   font-size: 0.9rem;
   color: var(--text-2);
+}
+
+/* =========================================
+   Resources Page
+   ========================================= */
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.resource-card {
+  display: block;
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: border-color 0.25s, transform 0.25s;
+  text-decoration: none;
+}
+
+.resource-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.resource-card__icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.resource-card__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-0);
+  margin-bottom: 0.5rem;
+}
+
+.resource-card__desc {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+.resource-card__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.resource-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--text-1);
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.resource-card__link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* =========================================
