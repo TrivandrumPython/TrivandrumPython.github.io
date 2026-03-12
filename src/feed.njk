@@ -1,0 +1,39 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.fullName }} — Events</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="{{ site.url }}/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}/" rel="alternate" type="text/html"/>
+  <id>{{ site.url }}/</id>
+  {%- set latestEvent = collections.events | last %}
+  <updated>{{ latestEvent.data.date | isoDate }}</updated>
+  <author>
+    <name>{{ site.fullName }}</name>
+  </author>
+  {%- for event in collections.events | reverse %}
+  <entry>
+    <title>{{ event.data.title }}</title>
+    <link href="{{ site.url }}{{ event.url }}" rel="alternate" type="text/html"/>
+    <id>{{ site.url }}{{ event.url }}</id>
+    <published>{{ event.data.date | isoDate }}</published>
+    <updated>{{ event.data.date | isoDate }}</updated>
+    <summary>{{ event.data.type | capitalize }}{% if event.data.venue %} at {{ event.data.venue }}{% endif %}{% if event.data.time %} — {{ event.data.time }}{% endif %}</summary>
+    <content type="html"><![CDATA[
+      <p><strong>{{ event.data.type | capitalize }}</strong>{% if event.data.venue %} at {{ event.data.venue }}{% endif %}</p>
+      {% if event.data.time %}<p>Time: {{ event.data.time }}</p>{% endif %}
+      {%- if event.data.talks %}
+      <ul>
+      {%- for talk in event.data.talks %}
+        <li>{{ talk.title }} — {{ talk.speaker }}</li>
+      {%- endfor %}
+      </ul>
+      {%- endif %}
+      {{ event.templateContent }}
+    ]]></content>
+  </entry>
+  {%- endfor %}
+</feed>

@@ -87,6 +87,11 @@ module.exports = function(eleventyConfig) {
     return new Date(dateObj).toISOString().split('T')[0];
   });
 
+  // ISO date for Atom feed
+  eleventyConfig.addFilter("isoDate", (dateObj) => {
+    return new Date(dateObj).toISOString();
+  });
+
   // Limit filter
   eleventyConfig.addFilter("limit", (arr, count) => {
     return arr.slice(0, count);
