@@ -12,4 +12,4 @@ registration_url: "https://luma.com/ef3qrz2p"
 image: null
 tags: ["AI", "GitHub Copilot", "Workshop"]
 ---
-GitHub Copilot Dev Days is a global, in-person user group initiative taking place from March 15th to April 30th 2026. GitHub Copilot Dev Days is coming to Trivandrum on 28 March. The series brings together developers, enthusiasts, and local tech communities to explore the power of GitHub Copilot through practical, hands-on experiences.
+GitHub Copilot Dev Days is a global, in-person user group initiative taking place from March 15th to April 30th 2026. GitHub Copilot Dev Days is coming to Trivandrum on 18 April. The series brings together developers, enthusiasts, and local tech communities to explore the power of GitHub Copilot through practical, hands-on experiences.
