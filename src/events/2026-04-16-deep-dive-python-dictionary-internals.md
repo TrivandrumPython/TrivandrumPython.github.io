@@ -9,7 +9,7 @@ talks:
   - title: "Dictionary Internals"
     speaker: "Akshay M (Software Engineer @ Google)"
 registration_url: "https://luma.com/wmnzifd1?utm_source=tripy_site"
-image: null
+image: "images/event_cover/ddp_dict_internals_cover.png"
 tags: ["deep dive", "python internals", "online"]
 ---
 
