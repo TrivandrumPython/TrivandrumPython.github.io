@@ -2,7 +2,7 @@
 title: "Github Copilot Dev Days | Trivandrum"
 date: 2026-04-25
 time: "09:30 AM - 1:00 PM"
-venue: "Kazhakoottam, Trivandrum"
+venue: "ICFOSS , Greenfield International Stadium, Karyavattom, Thiruvananthapuram"
 type: workshop
 attendees: null
 talks:
@@ -12,8 +12,8 @@ talks:
   - title: "Building AI Agents in Python with Copilot SDK"
     speaker: "Adarsh Divakaran"
 
-  - title: "Vibe Coding Mistakes to Avoid: Making Projects Production Ready using Copilot"
-    speaker: "Abhinand C"
+  - title: "Confidently Wrong: Why LLMs Hallucinate and How to Engineer Around It"
+    speaker: "Ajith Kumar"
 
 registration_url: "https://luma.com/ef3qrz2p"
 image: null
@@ -40,15 +40,17 @@ See you there.
 
 ## Schedule
 
-| Time     | Session / Activity                                                            | Speaker / Details |
-|----------|-------------------------------------------------------------------------------|-------------------|
-| 09:30 AM | Welcome & Opening session                                                     |                   |
-| 09:45 AM | The Anatomy of an AI Coding Harness                                           | Niyas Mohammed    |
-| 10:45 AM | Vibe Coding Mistakes to Avoid: Making Projects Production Ready using Copilot | Abhinand C        |
-| 11:30 AM | Building AI Agents in Python with Copilot SDK                                 | Adarsh Divakaran  |
-| 12:00 PM | GitHub Coding Agent – Mobile Vibecoding Hackathon (Win GitHub swag)           |                   |
-| 12:30 PM | Pizza & Networking                                                            |                   |
+| Time     | Session / Activity                                                    | Speaker / Details |
+|----------|-----------------------------------------------------------------------|-------------------|
+| 09:30 AM | Welcome & Opening session                                             |                   |
+| 09:45 AM | The Anatomy of an AI Coding Harness                                   | Niyas Mohammed    |
+| 10:45 AM | Confidently Wrong: Why LLMs Hallucinate and How to Engineer Around It | Ajith Kumar       |
+| 11:30 AM | Building AI Agents in Python with Copilot SDK                         | Adarsh Divakaran  |
+| 12:00 PM | GitHub Coding Agent – Mobile Vibecoding Hackathon (Win GitHub swag)   |                   |
+| 12:30 PM | Pizza & Networking                                                    |                   |
 
 ## Event Venue
 
-Exact location of the event will be updated here close to the event.
+International Centre for Free and Open Source Solutions (ICFOSS), Karyavattom, Thiruvananthapuram
+
+Located in Greenfield International Stadium Thiruvananthapuram: [Navigate](https://maps.app.goo.gl/X2WjeYixoLzv97KM7)
