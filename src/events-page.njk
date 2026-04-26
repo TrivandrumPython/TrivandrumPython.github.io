@@ -15,12 +15,11 @@ permalink: events/index.html
       </a>
     </div>
 
-    {% if collections.upcomingEvents.length > 0 %}
-    <div class="events-page__group">
+    <div class="events-page__group" data-event-group="upcoming"{% if collections.upcomingEvents.length == 0 %} hidden{% endif %}>
       <h3 class="events-page__group-title">Upcoming</h3>
-      <div class="events-list">
+      <div class="events-list" data-event-list="upcoming">
         {% for event in collections.upcomingEvents %}
-        <a href="{{ '/events/' | url }}{{ event.fileSlug }}/" class="event-row">
+        <a href="{{ '/events/' | url }}{{ event.fileSlug }}/" class="event-row" data-event-row data-event-date="{{ event.data.date | machineDate }}" data-event-time="{{ event.data.time }}" data-event-readable-date="{{ event.data.date | readableDate }}" data-event-year="{{ event.data.date | year }}" data-event-weekday="{{ event.data.date | dayOfWeek }}">
           <div class="event-row__date">
             <span class="event-row__month">{{ event.data.date | monthDay }}</span>
             <span class="event-row__day">{{ event.data.date | dayOfWeek }}</span>
@@ -30,12 +29,12 @@ permalink: events/index.html
             <div class="event-row__badges">
               <span class="badge badge--{{ event.data.type }}">{{ event.data.type | replace("-", " ") }}</span>
               {% if loop.first %}
-              <span class="badge badge--next">Next up</span>
+              <span class="badge badge--next" data-event-next-badge>Next up</span>
               {% endif %}
             </div>
             <h3 class="event-row__title">{{ event.data.title }}</h3>
             <div class="event-row__meta">
-              <span>{{ event.data.time }}</span>
+              <span data-event-meta-primary>{{ event.data.time }}</span>
               <span class="event-row__sep">·</span>
               <span>{{ event.data.venue }}</span>
             </div>
@@ -59,14 +58,12 @@ permalink: events/index.html
         {% endfor %}
       </div>
     </div>
-    {% endif %}
 
-    {% if collections.pastEvents.length > 0 %}
-    <div class="events-page__group">
+    <div class="events-page__group" data-event-group="past"{% if collections.pastEvents.length == 0 %} hidden{% endif %}>
       <h3 class="events-page__group-title">Past</h3>
-      <div class="events-list">
+      <div class="events-list" data-event-list="past">
         {% for event in collections.pastEvents %}
-        <a href="{{ '/events/' | url }}{{ event.fileSlug }}/" class="event-row event-row--past">
+        <a href="{{ '/events/' | url }}{{ event.fileSlug }}/" class="event-row event-row--past" data-event-row data-event-date="{{ event.data.date | machineDate }}" data-event-time="{{ event.data.time }}" data-event-readable-date="{{ event.data.date | readableDate }}" data-event-year="{{ event.data.date | year }}" data-event-weekday="{{ event.data.date | dayOfWeek }}">
           <div class="event-row__date">
             <span class="event-row__month">{{ event.data.date | monthDay }}</span>
             <span class="event-row__day">{{ event.data.date | year }}</span>
@@ -81,7 +78,7 @@ permalink: events/index.html
             </div>
             <h3 class="event-row__title">{{ event.data.title }}</h3>
             <div class="event-row__meta">
-              <span>{{ event.data.date | readableDate }}</span>
+              <span data-event-meta-primary>{{ event.data.date | readableDate }}</span>
               <span class="event-row__sep">·</span>
               <span>{{ event.data.venue }}</span>
             </div>
@@ -105,6 +102,5 @@ permalink: events/index.html
         {% endfor %}
       </div>
     </div>
-    {% endif %}
   </div>
 </section>

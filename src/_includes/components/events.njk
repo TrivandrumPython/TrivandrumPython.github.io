@@ -1,15 +1,15 @@
-<section id="events" class="section section--alt">
+<section id="events" class="section section--alt" data-home-events-section>
   <div class="container">
     <div class="section__header">
       <span class="section__label">// upcoming</span>
       <h2 class="section__title">Next Events</h2>
-      <p class="section__subtitle">Auto-populated from upcoming dates. All are welcome — no prior experience required.</p>
+      <p class="section__subtitle">Join our next meetup, workshop, or project night. All are welcome — no prior experience required.</p>
     </div>
 
     {% if collections.upcomingEvents.length > 0 %}
-    <div class="events-list">
+    <div class="events-list" data-home-event-list>
       {% for event in collections.upcomingEvents %}
-      <a href="{{ '/events/' | url }}{{ event.fileSlug }}/" class="event-row">
+      <a href="{{ '/events/' | url }}{{ event.fileSlug }}/" class="event-row" data-event-row data-event-date="{{ event.data.date | machineDate }}" data-event-time="{{ event.data.time }}" data-event-readable-date="{{ event.data.date | readableDate }}" data-event-year="{{ event.data.date | year }}" data-event-weekday="{{ event.data.date | dayOfWeek }}">
         <div class="event-row__date">
           <span class="event-row__month">{{ event.data.date | monthDay }}</span>
           <span class="event-row__day">{{ event.data.date | dayOfWeek }}</span>
@@ -19,12 +19,12 @@
           <div class="event-row__badges">
             <span class="badge badge--{{ event.data.type }}">{{ event.data.type | replace("-", " ") }}</span>
             {% if loop.first %}
-            <span class="badge badge--next">Next up</span>
+            <span class="badge badge--next" data-event-next-badge>Next up</span>
             {% endif %}
           </div>
           <h3 class="event-row__title">{{ event.data.title }}</h3>
           <div class="event-row__meta">
-            <span>{{ event.data.time }}</span>
+            <span data-event-meta-primary>{{ event.data.time }}</span>
             <span class="event-row__sep">·</span>
             <span>{{ event.data.venue }}</span>
           </div>
@@ -41,12 +41,12 @@
       </a>
       {% endfor %}
     </div>
-    {% else %}
-    <div class="empty-state">
-      <p>No upcoming events right now. Stay tuned!</p>
-      <a href="{{ site.links.telegram }}" class="btn btn--outline" target="_blank" rel="noopener">Join Telegram for updates</a>
-    </div>
     {% endif %}
+
+    <div class="empty-state" data-home-empty-state{% if collections.upcomingEvents.length > 0 %} hidden{% endif %}>
+      <p>No upcoming events right now. Stay tuned!</p>
+      <a href="{{ site.links.whatsapp }}" class="btn btn--outline" target="_blank" rel="noopener">Join WhatsApp community</a>
+    </div>
 
     <div class="section__footer">
       <a href="{{ site.links.luma }}" class="btn btn--primary" target="_blank" rel="noopener">
