@@ -16,9 +16,11 @@ talks:
     speaker: "Ajith Kumar"
 
 registration_url: "https://luma.com/ef3qrz2p"
-image: null
+image: images/events/copilot_devdays_26/photo_session.jpg
 tags: [ "AI", "GitHub Copilot", "Workshop" ]
 ---
+
+Session resources updated at [our Github repo](https://github.com/TrivandrumPython/Github-Copilot-Dev-Days-Trivandrum-2026)
 
 **Ready to build smarter apps and AI agents with GitHub Copilot?**
 

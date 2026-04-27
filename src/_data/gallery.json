@@ -96,5 +96,21 @@
   {
     "src": "/images/gallery/gallery-23.jpg",
     "alt": "TriPy community meetup photo"
+  },
+  {
+    "src": "/images/events/copilot_devdays_26/photo_session.jpg",
+    "alt": "Github Copilot DevDays photo session"
+  },
+  {
+    "src": "/images/events/copilot_devdays_26/attendees.jpg",
+    "alt": "Github Copilot DevDays Session"
+  },
+  {
+    "src": "/images/events/copilot_devdays_26/opening_session.jpg",
+    "alt": "Github Copilot DevDays opening session"
+  },
+  {
+    "src": "/images/events/copilot_devdays_26/github_swags.jpg",
+    "alt": "Github Copilot DevDays Swags"
   }
 ]
